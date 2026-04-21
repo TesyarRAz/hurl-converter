@@ -1,0 +1,41 @@
+{
+  "name": "json-to-hurl-asserts",
+  "displayName": "Hurl Formatter: json to assert",
+  "description": "Convert JSON to HURL type assertions in VS Code",
+  "version": "1.0.0",
+  "publisher": "hurl-dev",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.convertJsonToHurl"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.hurlFormatterConvertJsonToAssert",
+        "title": "Hurl Formatter: json to assert"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "esbuild": "^0.28.0",
+    "typescript": "^6.0.3",
+    "vsce": "^2.15.0",
+    "vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  }
+}
