@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { parseJsonToAsserts } from './src/converter';
 
 export function activate(context: vscode.ExtensionContext) {
-  const disposable = vscode.commands.registerCommand('extension.hurlFormatterConvertJsonToAssert', async () => {
+  const disposable = vscode.commands.registerCommand('extension.hurlConverterJsonToAssert', async () => {
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
       vscode.window.showErrorMessage('No active editor - open a .hurl file first');
