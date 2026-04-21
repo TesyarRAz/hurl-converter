@@ -10,6 +10,9 @@
   "categories": [
     "Snippets"
   ],
+  "activationEvents": [
+    "onCommand:extension.hurlConverterJsonToAssert"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
