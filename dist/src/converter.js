@@ -27,7 +27,7 @@ function walkObject(obj, path, asserts, isRoot = false) {
         asserts.push(`jsonpath "${path}" count == ${obj.length}`);
         // Check inner type only for index 0
         if (obj.length > 0) {
-            walkObject(obj[0], `${path}.0`, asserts);
+            walkObject(obj[0], `${path}[0]`, asserts);
         }
         return;
     }
